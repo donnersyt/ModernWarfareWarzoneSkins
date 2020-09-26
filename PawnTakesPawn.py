@@ -40,7 +40,7 @@ class PawnTakesPawn:
         return response.content
 
 
-    def createAcount(self):
+    def createAccount(self):
         headers = {
             'authority': 'pawntakespawn.com',
             'cache-control': 'max-age=0',
@@ -212,7 +212,7 @@ def getCode():
 
         instance = PawnTakesPawn(user, email)
         signupPage = instance.loadSignUpPage()
-        res = instance.createAcount()
+        res = instance.createAccount()
         k = 0
         while email.checkMessagePawnTakesPawn() == False:
             print("Waiting for email...")
