@@ -22,6 +22,7 @@ class MailBox:
 
         a = requests.get(self.baseUrl, params=params)
         res = a.json()
+        # print(res)
         for item in res:
             if "pawntakespawn" in item["from"]:
                 self.messageID = item["id"]
